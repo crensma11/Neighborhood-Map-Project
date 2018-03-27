@@ -31,4 +31,14 @@ The project contains three (3) types of files - **html**, **css** and **js**:
 - Click on *markers* or *list items* to view an info box with location information
 - The locations can be filtered by using the *filter box*
 
+### Resources Used
+
+- Google Maps API Documentation
+- Foursquare API Documentation
+- Udacity Lesson 5 - Using an organizational library
+- Udacity Lesson on Google Maps API
+- Bootstrap Sidebar Template by Scoop Themes
+- W3Schools
+- Knockout js Documentation
+
 ### Created By *Adam Crenshaw*
