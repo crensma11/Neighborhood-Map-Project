@@ -8,7 +8,7 @@
 
 ### Project Files
 
-The project contains three (3) types of files - * **html**, **css** and **js** *:
+The project contains three (3) types of files - **html**, **css** and **js**:
 
 #### 1. HTML
 - **index.html** - contains the page layout and binds all the js and css files together to make the page operational.
@@ -28,7 +28,7 @@ The project contains three (3) types of files - * **html**, **css** and **js** *
 
 - Download the the project or clone the repo.
 - Open the **index.html** file.
-- Click on *markers* or list items to view an info box with location information
+- Click on *markers* or *list items* to view an info box with location information
 - The locations can be filtered by using the *filter box*
 
 ### Created By *Adam Crenshaw*
