@@ -58,7 +58,7 @@ var LocationMarker = function(data) {
         self.street = results.location.formattedAddress[0] ? results.location.formattedAddress[0] : 'N/A';
         self.city = results.location.formattedAddress[1] ? results.location.formattedAddress[1] : 'N/A';
         self.phone = results.contact.formattedPhone ? results.contact.formattedPhone : 'N/A';
-        self.url = results.url ? results.url : 'N/A';
+        self.url = results.url ? results.url : '';
     }).fail(function () {
         alert('Foursquare did not load properly. Please refresh your page');
     });
@@ -166,7 +166,7 @@ function populateInfoWindow(marker, street, city, phone, url, infowindow) {
                 var nearStreetViewLocation = data.location.latLng;
                 var heading = google.maps.geometry.spherical.computeHeading(
                     nearStreetViewLocation, marker.position);
-                infowindow.setContent('<div>' + marker.title + '</div>' + '<div>' + street + '</div>' + '<div>' + city + '</div>' + '<div>' + phone + '</div>' + '<div>' + url + '</div><div id="pano"></div> <div>' + marker.type + '</div>');
+                infowindow.setContent('<div>' + marker.title + '</div>' + '<div>' + street + '</div>' + '<div>' + city + '</div>' + '<div>' + phone + '</div>' + '<a href=' + url + '>' + url + '</a><div id="pano"></div> <div>' + marker.type + '</div>');
                 var panoramaOptions = {
                     position: nearStreetViewLocation,
                     pov: {
@@ -177,7 +177,7 @@ function populateInfoWindow(marker, street, city, phone, url, infowindow) {
                 var panorama = new google.maps.StreetViewPanorama(
                     document.getElementById('pano'), panoramaOptions);
             } else {
-                infowindow.setContent('<div>' + marker.title + '</div>' + '<div>' + street + '</div>' + '<div>' + city + '</div>' + '<div>' + phone + '</div>' + '<div>' + url + '</div>' +
+                infowindow.setContent('<div>' + marker.title + '</div>' + '<div>' + street + '</div>' + '<div>' + city + '</div>' + '<div>' + phone + '</div>' + '<a href=' + url + '>' + url + '</a>' +
                     '<div>No Street View Found</div>' + marker.type + '</div>');
             }
         };
