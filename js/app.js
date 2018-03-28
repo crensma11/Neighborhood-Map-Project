@@ -26,16 +26,16 @@ function initMap() {
 
 
 
-var LocationMarker = function(data) {
+var LocationMarker = function (data) {
     var self = this;
 
     this.title = data.title;
     this.position = data.location;
     this.type = data.type;
     this.street = '',
-    this.city = '',
-    this.phone = '',
-    this.url = '';
+        this.city = '',
+        this.phone = '',
+        this.url = '';
 
     this.visible = ko.observable(true);
 
@@ -109,7 +109,7 @@ var LocationMarker = function(data) {
 
 
 // View Model
-var ViewModel = function() {
+var ViewModel = function () {
     var self = this;
 
     this.locationList = ko.observableArray([]);
@@ -121,7 +121,7 @@ var ViewModel = function() {
     });
 
     // locations viewed on map
-    this.placesList = ko.computed(function() {
+    this.placesList = ko.computed(function () {
         var filter = self.searchList().toLowerCase();
         if (filter) {
             return ko.utils.arrayFilter(self.locationList(), function (locationItem) {
@@ -131,7 +131,7 @@ var ViewModel = function() {
                 return result;
             });
         }
-        self.locationList().forEach(function(locationItem) {
+        self.locationList().forEach(function (locationItem) {
             locationItem.visible(true);
         });
         return self.locationList();
